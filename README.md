@@ -9,11 +9,20 @@ Currently the skel is working with the following stack:
 - Flow
 - Redux
 
+Current features:
+
+- Hot Module Replacement
+- Browser sync on save
+
 Missing features:
 
 - Webpack production build
 - ESLint
-- Hot Module Reloading
 - Redux Chrome devtools
 - Testing
 - Handle paths
+
+Project structure:
+
+- Each functionality is separated in individual folders containing the needed files. 
+- The interface to other modules is the index.js file. In there we can expose selectors.

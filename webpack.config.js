@@ -1,16 +1,21 @@
+const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 const config = {
-  entry: './src/index.js',
+  entry: [
+    'webpack-hot-middleware/client',
+    './src/index.js'
+  ],
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
   },
-  devtool: 'inline-source-map',
+  devtool: 'eval',
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),    
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({ 
       title: 'Output Management',

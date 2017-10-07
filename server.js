@@ -1,19 +1,28 @@
 const express = require('express');
+const path = require('path');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
+const webpackHotMiddleware = require('webpack-hot-middleware');
 
 const app = express();
 const config = require('./webpack.config.js');
 const compiler = webpack(config);
 
-// Tell express to use the webpack-dev-middleware and use the webpack.config.js
-// configuration file as a base.
 app.use(webpackDevMiddleware(compiler, {
+  noInfo: true,
   publicPath: config.output.publicPath,
   stats: {
 		colors: true
 	},
 }));
+
+app.use(webpackHotMiddleware(compiler));
+
+/*
+app.get('*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'src', 'public', 'index.html'));
+});
+*/
 
 // Serve the files on port 3000.
 app.listen(3000, function () {

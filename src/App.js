@@ -43,6 +43,11 @@ const TechList = styled.ul`
   text-align: initial;
 `
 
+const Tech = styled.li`
+  color: green;
+  padding: 5px 0;
+`
+
 type Props = {};
 
 class App extends PureComponent<Props> {
@@ -58,11 +63,11 @@ class App extends PureComponent<Props> {
         </Intro>
         <TechContainer>
           <TechList>
-            <li>Webpack</li>
-            <li>React</li>
-            <li>Styled components</li>
-            <li>Flow</li>
-            <li>Redux</li>
+            <Tech>Webpack</Tech>
+            <Tech>React</Tech>
+            <Tech>Styled Components</Tech>
+            <Tech>Flow</Tech>
+            <Tech>Redux</Tech>
           </TechList>
         </TechContainer>
       </AppContainer>
