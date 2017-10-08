@@ -2,7 +2,8 @@
   "presets": [
     "react", 
     "stage-1", 
-    "es2015"
+    "es2015",
+    "flow"
   ],
   "plugins": [
     "transform-object-rest-spread",

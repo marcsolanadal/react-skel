@@ -1,2 +1,5 @@
 [ignore]
-.*/node_modules/styled-components/.*
+.*/node_modules/styled-components/src/.*
+
+[libs]
+node_modules/styled-components/flow-typed/danger_v0.x.x.js
