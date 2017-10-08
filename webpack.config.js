@@ -13,7 +13,7 @@ const config = {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
   },
-  devtool: 'eval',
+  devtool: 'cheap-eval-source-map',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),    
     new CleanWebpackPlugin(['dist']),
