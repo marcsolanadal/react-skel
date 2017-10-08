@@ -13,11 +13,11 @@ Current features:
 
 - Hot Module Replacement
 - Browser sync on save
+- ESLint for React, Flow, ES6 and JSX
 
 Missing features:
 
 - Webpack production build
-- ESLint
 - Redux Chrome devtools
 - Testing
 - Handle paths

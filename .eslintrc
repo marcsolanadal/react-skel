@@ -3,13 +3,7 @@
     "browser": true,
     "node": true
   },
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module",
-    "ecmaFeatures": {
-        "jsx": true
-    }
-  },
+  "parser": "babel-eslint",
   "plugins": [
     "react"
   ],
@@ -17,9 +11,7 @@
     "eslint:recommended",
     "plugin:react/recommended"
   ],
-  //"parser": "babel-eslint",
   "rules": {
-    //"strict": 0, // required for babel-eslint parser
     "curly": "error",
     "default-case": "error",
     "no-var": "error",
