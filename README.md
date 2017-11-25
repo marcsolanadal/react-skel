@@ -6,14 +6,13 @@ Currently the skel is working with the following stack:
 - Webpack
 - React
 - Styled components
-- Flow
 - Redux
 
 Current features:
 
 - Hot Module Replacement
 - Browser sync on save
-- ESLint for React, Flow, ES6 and JSX
+- ESLint for React, ES6 and JSX
 
 Missing features:
 
