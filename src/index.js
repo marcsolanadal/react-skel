@@ -1,10 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
 
-import './index.css';
-import App from './App';
+import App from './containers/App'
+import store from './initializeStore'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+)
 
 if(module.hot) {
   module.hot.accept();

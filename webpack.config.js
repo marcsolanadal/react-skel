@@ -14,12 +14,18 @@ const config = {
     publicPath: '/'
   },
   devtool: 'cheap-eval-source-map',
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),    
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({ 
       title: 'Output Management',
       template: path.resolve(__dirname, 'public/index.html')
+    }),
+    new webpack.DefinePlugin({  
+      __DEV__: JSON.stringify(JSON.parse(process.env.DEBUG || 'false'))
     })
   ],
   module: {

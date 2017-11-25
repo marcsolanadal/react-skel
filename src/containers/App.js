@@ -1,5 +1,3 @@
-/* @flow */
-
 import React, { PureComponent } from 'react';
 import styled, { keyframes } from 'styled-components';
 
@@ -44,13 +42,11 @@ const TechList = styled.ul`
 `
 
 const Tech = styled.li`
-  color: green;
+  color: tomato;
   padding: 5px 0;
 `
 
-type Props = {};
-
-class App extends PureComponent<Props> {
+class App extends PureComponent {
   render() {
     return (
       <AppContainer>
