@@ -15,7 +15,11 @@ const config = {
   },
   devtool: 'cheap-eval-source-map',
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    alias: {
+      images: path.resolve(__dirname, 'assets/img'),
+      sounds: path.resolve(__dirname, 'assets/sound')
+    }
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),    
@@ -23,9 +27,6 @@ const config = {
     new HtmlWebpackPlugin({ 
       title: 'Output Management',
       template: path.resolve(__dirname, 'public/index.html')
-    }),
-    new webpack.DefinePlugin({  
-      __DEV__: JSON.stringify(JSON.parse(process.env.DEBUG || 'false'))
     })
   ],
   module: {

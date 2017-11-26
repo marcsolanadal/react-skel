@@ -14,7 +14,7 @@ app.use(webpackDevMiddleware(compiler, {
   publicPath: config.output.publicPath,
   stats: {
 		colors: true
-	},
+	}
 }));
 
 app.use(webpackHotMiddleware(compiler));

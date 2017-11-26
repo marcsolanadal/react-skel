@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import logo from './logo.svg';
+import logo from 'images/logo.svg';
+// import logo from '../../assets/img/logo.svg';
 
 const AppContainer = styled.div`
   text-align: center;
@@ -42,7 +43,7 @@ const TechList = styled.ul`
 `
 
 const Tech = styled.li`
-  color: tomato;
+  color: green;
   padding: 5px 0;
 `
 
