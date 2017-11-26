@@ -18,7 +18,7 @@ const config = {
     extensions: ['.js', '.jsx'],
     alias: {
       images: path.resolve(__dirname, 'assets/img'),
-      sounds: path.resolve(__dirname, 'assets/sound')
+      sounds: path.resolve(__dirname, 'assets/sounds')
     }
   },
   plugins: [

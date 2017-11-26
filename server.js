@@ -19,7 +19,9 @@ app.use(webpackDevMiddleware(compiler, {
 
 app.use(webpackHotMiddleware(compiler));
 
+app.use(express.static('public'))
+
 // Serve the files on port 3000.
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!\n');
+  console.log('listening on port 3000...\n');
 });

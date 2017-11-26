@@ -16,6 +16,7 @@
     "default-case": "error",
     "no-var": "error",
     "prefer-const": "error",
+    "no-unused-vars": 0,
 
     // Code style rules
     "arrow-parens": ["error", "always"],

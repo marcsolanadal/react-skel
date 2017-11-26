@@ -3,11 +3,11 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import rootReducer from './reducers'
 
 import thunk from './middleware/thunk'
-import logger from './middleware/logger'
+import soundPlayer from './middleware/soundPlayer'
 
 const middleware = [
   thunk,
-  logger
+  soundPlayer
 ]
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
