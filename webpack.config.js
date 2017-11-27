@@ -11,7 +11,7 @@ const config = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname),
-    publicPath: '/'
+    publicPath: ''
   },
   devtool: 'cheap-eval-source-map',
   resolve: {
@@ -50,10 +50,6 @@ const config = {
             }
           }
         ]
-      },
-      {
-        test: /\.(mp3)$/,
-        use: ['file-loader']
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
