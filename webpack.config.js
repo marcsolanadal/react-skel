@@ -10,7 +10,7 @@ const config = {
   ],
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'docs'),
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
   },
   devtool: 'cheap-eval-source-map',
@@ -23,7 +23,7 @@ const config = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),    
-    new CleanWebpackPlugin(['dist']),
+    //new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({ 
       title: 'Output Management',
       template: path.resolve(__dirname, 'public/index.html')
