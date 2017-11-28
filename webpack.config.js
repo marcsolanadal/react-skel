@@ -10,7 +10,7 @@ const config = {
   ],
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname),
+    path: path.resolve(__dirname, 'dist'),
     publicPath: ''
   },
   devtool: 'cheap-eval-source-map',
