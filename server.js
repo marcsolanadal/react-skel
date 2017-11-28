@@ -20,7 +20,7 @@ app.use(webpackDevMiddleware(compiler, {
 app.use(webpackHotMiddleware(compiler));
 
 // Allows serving static assets
-app.use(express.static('public'));
+app.use(express.static('assets'));
 
 // Serve the files on port 3000.
 app.listen(3000, function () {

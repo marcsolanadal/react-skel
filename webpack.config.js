@@ -11,22 +11,21 @@ const config = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
+    publicPath: ''
   },
   devtool: 'cheap-eval-source-map',
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
-      images: path.resolve(__dirname, 'assets/img'),
-      sounds: path.resolve(__dirname, 'assets/sounds')
+      images: path.resolve(__dirname, 'assets/images')
     }
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),    
-    //new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({ 
       title: 'Output Management',
-      template: path.resolve(__dirname, 'public/index.html')
+      template: path.resolve(__dirname, 'assets/index.html')
     })
   ],
   module: {
@@ -52,16 +51,16 @@ const config = {
         ]
       },
       {
+        test: /\.(mp3)$/,
+        use: ['file-loader']
+      },
+      {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader'
-        ]
+        use: ['file-loader']
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-          'file-loader'
-        ]
+        use: ['file-loader']
       }
     ]
   }

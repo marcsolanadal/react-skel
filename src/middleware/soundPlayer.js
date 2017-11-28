@@ -7,7 +7,7 @@ const soundPlayer = (store) => (next) => (action) => {
   if (action.type === 'PLAY_SOUND') {
     const { filename } = action.payload
     const sound = new Howl({
-      src: [`sound/${filename}.mp3`]
+      src: [`sounds/${filename}.mp3`]
     });
 
     const id = sound.play()

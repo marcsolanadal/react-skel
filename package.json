@@ -11,6 +11,7 @@
     "check-code": "npm-run-all --parallel lint",
     "precommit": "npm run check-code",
     "prepush": "npm test",
+    "move-dist": "mv dist/** .",
     "predeploy": "npm run build:dev",
     "deploy": "gh-pages -d dist"
   },

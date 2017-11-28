@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import logo from '../../public/img/logo.svg';
-// import logo from '../../assets/img/logo.svg';
+import logo from 'images/logo.svg';
 
 const AppContainer = styled.div`
   text-align: center;
