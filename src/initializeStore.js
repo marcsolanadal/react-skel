@@ -4,10 +4,12 @@ import rootReducer from './reducers'
 
 import thunk from './middleware/thunk'
 import soundPlayer from './middleware/soundPlayer'
+import assetLoader from './middleware/assetLoader'
 
 const middleware = [
   thunk,
-  soundPlayer
+  soundPlayer,
+  assetLoader
 ]
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose

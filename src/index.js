@@ -7,6 +7,10 @@ import store from './initializeStore'
 
 import './main.css'
 
+store.dispatch({
+  type: 'PRELOAD_ASSETS'
+})
+
 render(
   <Provider store={store}>
     <App />

@@ -2,7 +2,7 @@
   "name": "react-skel",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://marcsolanadal.github.io/react-skel",  
+  "homepage": "https://marcsolanadal.github.io/react-skel",
   "scripts": {
     "build:dev": "webpack --config webpack.config.js",
     "start": "node server.js",
@@ -16,7 +16,9 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "howler": "^2.0.5",
+    "localforage": "^1.5.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",

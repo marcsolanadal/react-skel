@@ -17,6 +17,7 @@ const config = {
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
+      constants: path.resolve(__dirname, 'src/constants'),
       images: path.resolve(__dirname, 'assets/images')
     }
   },
