@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux'
 
 import engine from './engine'
+import game from './game'
 
 const App = combineReducers({
-  engine
+  engine,
+  game
 })
 
 export default App

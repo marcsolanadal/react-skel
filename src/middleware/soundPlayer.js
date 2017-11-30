@@ -5,20 +5,21 @@ let soundList = {}
 
 const soundPlayer = (store) => (next) => (action) => {
 
-  if (action.type === 'TEST') {
-    localForage.getItem('sound-sample').then((binary) => {  
+  if (action.type === 'PLAY_SOUND') {
+    localForage.getItem(action.payload.filename).then((binary) => {  
       const blob = new Blob([binary], { type : 'audio/mp3' })
       const blobUrl = URL.createObjectURL(blob)
 
       const sound = new Howl({
         src: [blobUrl],
-        format: ['mp3']
+        format: ['mp3'],
+        volume: action.payload.volume || 1
       })
       sound.play()
     })
   }
   
-  if (action.type === 'PLAY_SOUND') {
+  if (action.type === 'PLAY_SOUND2') {
     const { filename } = action.payload
     const sound = new Howl({
       src: [`sounds/${filename}.mp3`]

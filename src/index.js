@@ -19,6 +19,11 @@ render(
 )
 
 if (process.env.NODE_ENV !== 'production') {
+
+  // Attaching the store to the global window object to mess with it
+  window.store = store 
+
+  // Enables hot module reloading
   if(module.hot) {
     module.hot.accept();
   }

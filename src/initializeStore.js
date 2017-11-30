@@ -2,10 +2,12 @@ import { createStore, applyMiddleware, compose } from 'redux'
 
 import rootReducer from './reducers'
 
+import logger from 'redux-logger'
 import thunk from './middleware/thunk'
 import soundPlayer from './middleware/soundPlayer'
 
 const middleware = [
+  logger,
   thunk,
   soundPlayer
 ]

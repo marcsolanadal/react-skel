@@ -8,7 +8,7 @@ const initialState = {
   isLoadingAssets: true
 }
 
-const engine = (state = initialState, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
 
     case LOAD_ASSETS_PENDING:
@@ -33,5 +33,3 @@ const engine = (state = initialState, action) => {
       return state
   }
 }
-
-export default engine
