@@ -4,12 +4,10 @@ import rootReducer from './reducers'
 
 import thunk from './middleware/thunk'
 import soundPlayer from './middleware/soundPlayer'
-import assetLoader from './middleware/assetLoader'
 
 const middleware = [
   thunk,
-  soundPlayer,
-  assetLoader
+  soundPlayer
 ]
 
 let composeEnhancers = compose

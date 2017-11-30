@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
 
-import todos from './todos'
+import engine from './engine'
 
 const App = combineReducers({
-  todos
+  engine
 })
 
 export default App

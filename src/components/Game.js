@@ -46,7 +46,7 @@ const Tech = styled.li`
   padding: 5px 0;
 `
 
-class App extends PureComponent {
+export default class Game extends PureComponent {
   render() {
     return (
       <AppContainer>
@@ -70,5 +70,3 @@ class App extends PureComponent {
     )
   }
 }
-
-export default App;
