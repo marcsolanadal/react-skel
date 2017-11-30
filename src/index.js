@@ -11,6 +11,10 @@ store.dispatch({
   type: 'PRELOAD_ASSETS'
 })
 
+store.dispatch({
+  type: 'TEST'
+})
+
 render(
   <Provider store={store}>
     <App />
@@ -18,6 +22,8 @@ render(
   document.getElementById('root')
 )
 
-if(module.hot) {
-  module.hot.accept();
+if (process.env.NODE_ENV !== 'production') {
+  if(module.hot) {
+    module.hot.accept();
+  }
 }

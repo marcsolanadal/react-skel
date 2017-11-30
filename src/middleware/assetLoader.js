@@ -5,17 +5,20 @@ import localForage from 'localforage'
 
 import assets from 'constants/assetUrls'
 
-const devAssets = assets.map((asset) => { 
-  return {
-    ...asset, 
-    url: `https://cors-anywhere.herokuapp.com/${asset.url}`
-  }
-})
+let assetUrls = assets;
+if (process.env.NODE_ENV !== 'production') {
+  assetUrls = assets.map((asset) => { 
+    return {
+      ...asset, 
+      url: `https://cors-anywhere.herokuapp.com/${asset.url}`
+    }
+  })
+}
 
 const assetLoader = (store) => (next) => (action) => {
 
   if (action.type === 'PRELOAD_ASSETS') {
-    devAssets.map((asset) => {
+    assetUrls.map((asset) => {
 
       return axios({
         method: 'get',
@@ -28,7 +31,7 @@ const assetLoader = (store) => (next) => (action) => {
       })
 
       .catch((err) => {
-        console.err(err)
+        console.error(err)
       })
 
     })

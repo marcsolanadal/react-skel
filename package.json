@@ -4,15 +4,16 @@
   "private": true,
   "homepage": "https://marcsolanadal.github.io/react-skel",
   "scripts": {
-    "build:dev": "webpack --config webpack.config.js",
+    "build:dev": "webpack --config ./webpack/webpack.dev.js",
+    "build:prod": "webpack --config ./webpack/webpack.prod.js",
     "start": "node server.js",
     "test": "echo 'testing in progres...'",
-    "lint": "eslint ./ --cache --ignore-pattern .gitignore",
+    "lint": "eslint ./src/ --cache --ignore-pattern .gitignore",
     "check-code": "npm-run-all --parallel lint",
     "precommit": "npm run check-code",
     "prepush": "npm test",
     "move-dist": "mv dist/** .",
-    "predeploy": "npm run build:dev",
+    "predeploy": "npm run build:prod",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
@@ -48,8 +49,11 @@
     "path": "^0.12.7",
     "react-redux": "^5.0.6",
     "style-loader": "^0.19.0",
+    "uglifyjs-webpack-plugin": "^1.1.1",
     "webpack": "^3.6.0",
+    "webpack-build-notifier": "^0.1.17",
     "webpack-dev-middleware": "^1.12.0",
-    "webpack-hot-middleware": "^2.19.1"
+    "webpack-hot-middleware": "^2.19.1",
+    "webpack-merge": "^4.1.1"
   }
 }
