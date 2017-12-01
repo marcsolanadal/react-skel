@@ -1,11 +1,9 @@
 import { 
   CHANGE_CHIMSER_STATE
-} from '../constants/actionTypes'
+} from './actionTypes'
 
 const initialState = {
-  chimster: {
-    animation: 'run'
-  }
+  animation: 'run'
 }
 
 export default (state = initialState, action) => {
@@ -14,10 +12,7 @@ export default (state = initialState, action) => {
     case CHANGE_CHIMSER_STATE:
       return {
         ...state,
-        chimster: {
-          ...state.chimster,
-          animation: action.payload.animation
-        }
+        animation: action.payload.animation
       }
 
     default:

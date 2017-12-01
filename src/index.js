@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import store from './initializeStore'
 
 import Engine from './containers/Engine/Engine'
-import Game from './components/Game'
+import Game from './containers/Game/Game'
 
 import './main.css'
 

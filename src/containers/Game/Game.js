@@ -4,8 +4,8 @@ import styled from 'styled-components'
 
 import { playSound, stopSound } from 'engine/actions'
 
-import Chimster from '../containers/Chimster'
-import DecisionsPanel from '../containers/DecisionsPanel'
+import Chimster from './containers/Chimster/Chimster'
+import DecisionsPanel from './containers/DecisionsPanel/DecisionsPanel'
 
 const Screen = styled.div`
   display: flex;

@@ -3,7 +3,7 @@ import propTypes from 'prop-types'
 import { connect } from 'react-redux'
 import styled, { keyframes } from 'styled-components'
 
-import { getChimsterState } from '../selectors/gameSelectors'
+import { getChimsterState } from './chimsterSelectors'
 
 import sprites from 'images/chimster.png'
 

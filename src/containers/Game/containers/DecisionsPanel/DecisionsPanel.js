@@ -3,10 +3,8 @@ import propTypes from 'prop-types'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
 
-import { setChimsterAnimation } from '../actions/chimsterActions'
+import { setChimsterAnimation } from '../Chimster/chimsterActions'
 import { playSound } from 'engine/actions'
-
-import Button from '../components/Button'
 
 const Container = styled.div`
   display: flex;

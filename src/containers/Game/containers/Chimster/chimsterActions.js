@@ -1,6 +1,6 @@
 import { 
   CHANGE_CHIMSER_STATE
-} from '../constants/actionTypes'
+} from './actionTypes'
 
 export const setChimsterAnimation= (animation) => {
   return {

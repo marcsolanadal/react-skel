@@ -16,7 +16,6 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
-      constants: path.resolve(__dirname, '../src/constants'),
       engine: path.resolve(__dirname, '../src/containers/Engine'),
       globals: path.resolve(__dirname, '../src/constants'),
       images: path.resolve(__dirname, '../assets/images')
