@@ -4,11 +4,26 @@ import { connect } from 'react-redux'
 import styled from 'styled-components'
 
 import { setChimsterAnimation } from '../actions/chimsterActions'
+import { playSound } from '../actions/audioPlayerActions'
 
 import Button from '../components/Button'
+import { platform } from 'os';
 
 const Container = styled.div`
   display: flex;
+`
+
+const Box = styled.div`
+  background-color: #E1E1E7;
+  color: #7A7A8B;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #7A7A8B;
+  border-radius: 10px;
+  margin: 20px;
 `
 
 class DecisionsPanel extends React.Component {
@@ -16,18 +31,24 @@ class DecisionsPanel extends React.Component {
     setChimsterAnimation: propTypes.func
   }
 
+  changeAnimation = (animation, sound) => {
+    this.props.setChimsterAnimation(animation)
+    this.props.playSound(sound)
+  }
+
   render() {
     const { setChimsterAnimation } = this.props
     return (
       <Container>
-        <Button type='dead' handleButtonClick={setChimsterAnimation}>Dead</Button>
-        <Button type='hang' handleButtonClick={setChimsterAnimation}>Hang</Button>
-        <Button type='run' handleButtonClick={setChimsterAnimation}>Run</Button>
+        <Box onClick={() => this.changeAnimation('dead', 'lick-1')}>Dead</Box>
+        <Box onClick={() => this.changeAnimation('run', 'lick-2')}>Run</Box>
+        <Box onClick={() => this.changeAnimation('hang', 'factorEnergia')}>Hang</Box>
       </Container>
     )
   }
 }
 
 export default connect(null, {
-  setChimsterAnimation
+  setChimsterAnimation,
+  playSound
 })(DecisionsPanel)

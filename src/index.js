@@ -5,6 +5,8 @@ import { Provider } from 'react-redux'
 import store from './initializeStore'
 
 import AssetLoader from './containers/AssetLoader'
+import AudioPlayer from './containers/AudioPlayer'
+
 import Game from './components/Game'
 
 import './main.css'
@@ -12,7 +14,9 @@ import './main.css'
 render(
   <Provider store={store}>
     <AssetLoader>
-      <Game />
+      <AudioPlayer>
+        <Game />
+      </AudioPlayer>
     </AssetLoader>
   </Provider>,
   document.getElementById('root')

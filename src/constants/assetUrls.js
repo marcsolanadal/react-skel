@@ -1,7 +1,7 @@
 const assets = [
   { 
-    name: 'sound-sample', 
-    url: 'https://firebasestorage.googleapis.com/v0/b/react-skel.appspot.com/o/sound-sample.mp3?alt=media&token=7cd87511-fa08-4921-9f1e-0fb6bb122cf9' 
+    name: 'audio-sprite', 
+    url: 'https://firebasestorage.googleapis.com/v0/b/react-skel.appspot.com/o/audacity-sample.ogg?alt=media&token=83bb740a-c3f4-4545-a33a-c17812f7e822' 
   },
   {
     name: 'chimster-spritesheet',

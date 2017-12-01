@@ -1,15 +1,17 @@
 import { createStore, applyMiddleware, compose } from 'redux'
+import { createLogger } from 'redux-logger'
 
 import rootReducer from './reducers'
 
-import logger from 'redux-logger'
 import thunk from './middleware/thunk'
-import soundPlayer from './middleware/soundPlayer'
+const logger =  createLogger({ 
+  collapsed: true,
+  predicate: (getState, action) => action.type !== undefined
+})
 
 const middleware = [
   logger,
-  thunk,
-  soundPlayer
+  thunk
 ]
 
 let composeEnhancers = compose

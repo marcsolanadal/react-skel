@@ -26,21 +26,21 @@ const Dead = styled.div`
   width: 123px;
   height: 101px;
   background: url(${sprites});
-  animation: ${animations['dead']} 1.5s steps(12) forwards;
+  animation: ${animations['dead']} 0.75s steps(12) forwards;
 `
 
 const Hang = styled.div`
   width: 70px;
   height: 56px;
   background: url(${sprites}) left center;
-  animation: ${animations['hang']} 1.2s steps(13) infinite;
+  animation: ${animations['hang']} 0.75s steps(13) infinite;
 `
 
 const Run = styled.div`
   width: 101px;
   height: 75px;
   background: url(${sprites}) left center;
-  animation: ${animations['run']} 1s steps(16) infinite;
+  animation: ${animations['run']} 0.6s steps(16) infinite;
 `
 
 const AnimationContainer = styled.div`

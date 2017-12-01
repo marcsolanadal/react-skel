@@ -2,6 +2,11 @@ import React from 'react'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
 
+import { 
+  playSound,
+  stopSound
+} from '../actions/audioPlayerActions'
+
 import Chimster from '../containers/Chimster'
 import DecisionsPanel from '../containers/DecisionsPanel'
 
@@ -14,9 +19,12 @@ const Screen = styled.div`
 `
 
 class Game extends React.Component {
+
   componentDidMount() {
-    this.props.dispatch({ type: 'PLAY_SOUND', payload: { filename: 'sound-sample' }})
+    this.props.stopSound()
+    this.props.playSound('main-song', 0.2)
   }
+
   render() {
     return (
       <Screen>
@@ -27,4 +35,7 @@ class Game extends React.Component {
   }
 }
 
-export default connect()(Game)
+export default connect(null, {
+  playSound,
+  stopSound
+})(Game)
