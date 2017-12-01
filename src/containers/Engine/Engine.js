@@ -1,7 +1,7 @@
 import React from 'react'
 
-import AssetLoader from './containers/AssetLoader/AssetLoader'
-import AudioSource from './containers/AudioSource/AudioSource'
+import AssetLoader from './containers/AssetLoader'
+import AudioSource from './containers/AudioSource'
 
 export default class Engine extends React.PureComponent {
   render() {
