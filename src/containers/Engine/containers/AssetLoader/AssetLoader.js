@@ -2,10 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { object, bool, func } from 'prop-types'
 
-import { loadAssets } from '../actions/assetLoaderActions'
-import { isLoadingAssets } from '../selectors/assetLoaderSelectors'
+import { loadAssets } from './assetLoaderActions'
+import { isLoadingAssets } from './assetLoaderSelectors'
 
-import Loading from '../components/Loading'
+import Loading from '../../components/Loading'
 
 class AssetLoader extends React.Component {
   static propTypes = {

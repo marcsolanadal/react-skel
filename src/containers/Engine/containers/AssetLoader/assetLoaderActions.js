@@ -7,9 +7,9 @@ import {
   LOAD_ASSETS_PENDING,
   LOAD_ASSETS_SUCCESS,
   LOAD_ASSETS_ERROR
-} from '../constants/actionTypes'
+} from './actionTypes'
 
-import assetUrls from 'constants/assetUrls'
+import assetUrls from 'globals/assetUrls'
 
 let assets = assetUrls;
 if (process.env.NODE_ENV !== 'production') {

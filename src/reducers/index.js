@@ -1,12 +1,10 @@
 import { combineReducers } from 'redux'
 
-import engine from './engine'
-import audio from './audio'
 import game from './game'
+import engine from '../containers/Engine/reducers/engine'
 
 const App = combineReducers({
   engine,
-  audio,
   game
 })
 

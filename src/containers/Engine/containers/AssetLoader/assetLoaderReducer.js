@@ -2,7 +2,7 @@ import {
   LOAD_ASSETS_PENDING,
   LOAD_ASSETS_SUCCESS,
   LOAD_ASSETS_ERROR
-} from '../constants/actionTypes'
+} from './actionTypes'
 
 const initialState = {
   isLoadingAssets: true

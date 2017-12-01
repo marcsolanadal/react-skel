@@ -2,10 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
 
-import { 
-  playSound,
-  stopSound
-} from '../actions/audioPlayerActions'
+import { playSound, stopSound } from 'engine/actions'
 
 import Chimster from '../containers/Chimster'
 import DecisionsPanel from '../containers/DecisionsPanel'

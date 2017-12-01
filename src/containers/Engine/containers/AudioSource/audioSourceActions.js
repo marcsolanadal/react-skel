@@ -7,9 +7,9 @@ import {
   SETUP_AUDIO_ERROR,
   PLAY_SOUND,
   STOP_SOUND
-} from '../constants/actionTypes'
+} from './actionTypes'
 
-import audioSprites from '../constants/audioSprites'
+import audioSprites from 'globals/audioSprites'
 
 const createAudioSource = (blobUrl) => {
   return new Howl({

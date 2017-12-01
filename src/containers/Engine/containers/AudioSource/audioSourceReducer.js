@@ -2,7 +2,7 @@ import {
   SETUP_AUDIO_PENDING,
   SETUP_AUDIO_SUCCESS,
   SETUP_AUDIO_ERROR
-} from '../constants/actionTypes'
+} from './actionTypes'
 
 const initialState = {
   audioEnabled: false

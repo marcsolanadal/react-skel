@@ -2,10 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { object, bool, func } from 'prop-types'
 
-import { setupAudioSources } from '../actions/audioPlayerActions'
-import { isAudioEnabled } from '../selectors/audioPlayerSelectors'
+import { setupAudioSources } from './audioSourceActions'
+import { isAudioEnabled } from './audioSourceSelectors'
 
-import Loading from '../components/Loading'
+import Loading from '../../components/Loading'
 
 class AudioPlayer extends React.Component {
   static propTypes = {

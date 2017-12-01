@@ -4,10 +4,9 @@ import { connect } from 'react-redux'
 import styled from 'styled-components'
 
 import { setChimsterAnimation } from '../actions/chimsterActions'
-import { playSound } from '../actions/audioPlayerActions'
+import { playSound } from 'engine/actions'
 
 import Button from '../components/Button'
-import { platform } from 'os';
 
 const Container = styled.div`
   display: flex;
